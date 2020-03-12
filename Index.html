@@ -197,10 +197,17 @@
     </div>
   </article>
 
-<div ng-controller="VisitantesController" >
-  
-
+<div ng-controller="VisitantesController " style="border: solid;" >
+  <h1>Registro Visitantes</h1>
   <div class="wrapper" >
+    <div class="contact-item" ng-repeat="visitante in visitantes | orderBy: 'nombre'" >
+    <div class="nombre"> {{visitante.nombre}} - {{visitante.telefono}}</div>
+    <span class="viaje"> {{visitante.viaje}} </span>
+  </div>
+</div> 
+<br>
+<br>
+  <div class="wrapper">
     <h2>Añadir visitante</h2>
     nombre: <input type=" text" ng-model="n_visitante.nombre"></input>
     telefono: <input type="text"  ng-model="n_visitante.telefono"></input>
@@ -208,7 +215,8 @@
     <button ng-click="Save()" >Registrar</button>
   </div>
   </div>
-
+<br>
+<br>
   <footer id="sticky-footer" class="py-2 bg-dark text-white-50">
     <div class="container text-center" style="color: #ffffff">
       <font face="Arial">
