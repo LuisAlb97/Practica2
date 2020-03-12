@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app>
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="CSS/photoswipe.css">
   <link rel="stylesheet" type="text/css" href="CSS/default-skin.css">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
   <script type="text/javascript" src="./js/all.min.js"></script>
   <script type="text/javascript" src="./js/photoswipe.min.js"></script>
+  <script type="text/javascript" src="./js/angularjs.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
 
   <title>MI Hobbit</title>
 </head>
@@ -193,7 +196,18 @@
     
     </div>
   </article>
+
+<div ng-controller="VisitantesController" >
   
+
+  <div class="wrapper" >
+    <h2>Añadir visitante</h2>
+    nombre: <input type=" text" ng-model="n_visitante.nombre"></input>
+    telefono: <input type="text"  ng-model="n_visitante.telefono"></input>
+    viaje: <input type="text" ng-model="n_visitante.viaje"></input>
+    <button ng-click="Save()" >Registrar</button>
+  </div>
+  </div>
 
   <footer id="sticky-footer" class="py-2 bg-dark text-white-50">
     <div class="container text-center" style="color: #ffffff">
